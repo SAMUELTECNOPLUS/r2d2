@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link type="text/css" rel="stylesheet" href="style.css"/>
+  </head>
+  <body>
+    <!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TECH STORE</title>
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="#" class="logo">🛒 TechStore</a>
+        <ul class="nav-links">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#productos">Productos</a></li>
+          <li><a href="#ofertas">Ofertas</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- ===== CARRUSEL ===== -->
+    <div class="carousel">
+      <button class="carousel-btn prev" onclick="moveCarousel(-1)">❮</button>
+      <div class="carousel-track">
+        <div class="carousel-slide slide1">🎉 ¡Nuevos Productos!</div>
+        <div class="carousel-slide slide2">💻 Descuentos 50% OFF</div>
+        <div class="carousel-slide slide3">🚚 Envío Gratis +$100</div>
+      </div>
+      <button class="carousel-btn next" onclick="moveCarousel(1)">❯</button>
+    </div>
+
+    <!-- ===== BUSCADOR ===== -->
+    <div class="search-section">
+      <h2>Encuentra tu Producto Ideal</h2>
+      <div class="search-box">
+        <input 
+          type="text"
+          class="search-input"
+          id="searchInput"
+          placeholder="Busca por nombre, categoría..."
+          onkeyup="handleSearch()"
+        >
+        <button class="search-btn" onclick="handleSearch()">🔍 Buscar</button>
+      </div>
+
+      <div class="filters">
+        <button class="filter-btn active" onclick="filterByCategory('todos')">Todos</button>
+        <button class="filter-btn" onclick="filterByCategory('laptop')">Laptops</button>
+        <button class="filter-btn" onclick="filterByCategory('smartphone')">Smartphones</button>
+        <button class="filter-btn" onclick="filterByCategory('accesorio')">Accesorios</button>
+        <button class="filter-btn" onclick="filterByCategory('audio')">Audio</button>
+      </div>
+
+      <div class="search-info" id="searchInfo"></div>
+    </div>
+
+    <!-- ===== PRODUCTOS ===== -->
+    <section class="products-section" id="productos">
+      <div class="products-grid" id="productsGrid"></div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>TechStore</h3>
+          <p>Tu tienda de confianza para tecnología</p>
+        </div>
+
+        <div class="footer-section">
+          <h3>Enlaces Rápidos</h3>
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#productos">Productos</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Categorías</h3>
+          <ul>
+            <li><a href="#">Laptops</a></li>
+            <li><a href="#">Smartphones</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Contacto</h3>
+          <ul>
+            <li>📧 info@techstore.com</li>
+            <li>📞 +1 (809) 555-0123</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 TechStore</p>
+      </div>
+    </footer>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script src="./js/script.js"></script>
+  </body>
+</html>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
