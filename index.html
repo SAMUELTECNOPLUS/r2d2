@@ -1,10 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <link type="text/css" rel="stylesheet" href="style.css"/>
-  </head>
-  <body>
-    <!DOCTYPE html>
 <html lang="es">
   <head>
     <meta charset="UTF-8">
@@ -17,26 +11,28 @@
     <!-- ===== NAVBAR ===== -->
     <nav class="navbar">
       <div class="nav-container">
-        <a href="#" class="logo">🛒 TechStore</a>
+        <a href="#inicio" class="logo">🛒 TechStore</a>
         <ul class="nav-links">
           <li><a href="#inicio">Inicio</a></li>
           <li><a href="#productos">Productos</a></li>
-          <li><a href="#ofertas">Ofertas</a></li>
+          <li><a href="ofertas.html">Ofertas</a></li>
           <li><a href="#contacto">Contacto</a></li>
         </ul>
       </div>
     </nav>
 
     <!-- ===== CARRUSEL ===== -->
-    <div class="carousel">
-      <button class="carousel-btn prev" onclick="moveCarousel(-1)">❮</button>
-      <div class="carousel-track">
-        <div class="carousel-slide slide1">🎉 ¡Nuevos Productos!</div>
-        <div class="carousel-slide slide2">💻 Descuentos 50% OFF</div>
-        <div class="carousel-slide slide3">🚚 Envío Gratis +$100</div>
+    <section id="inicio">
+      <div class="carousel">
+        <button class="carousel-btn prev" onclick="moveCarousel(-1)">❮</button>
+        <div class="carousel-track">
+          <div class="carousel-slide slide1">🎉 ¡Nuevos Productos!</div>
+          <div class="carousel-slide slide2">💻 Descuentos 50% OFF</div>
+          <div class="carousel-slide slide3">🚚 Envío Gratis +$100</div>
+        </div>
+        <button class="carousel-btn next" onclick="moveCarousel(1)">❯</button>
       </div>
-      <button class="carousel-btn next" onclick="moveCarousel(1)">❯</button>
-    </div>
+    </section>
 
     <!-- ===== BUSCADOR ===== -->
     <div class="search-section">
@@ -53,11 +49,11 @@
       </div>
 
       <div class="filters">
-        <button class="filter-btn active" onclick="filterByCategory('todos')">Todos</button>
-        <button class="filter-btn" onclick="filterByCategory('laptop')">Laptops</button>
-        <button class="filter-btn" onclick="filterByCategory('smartphone')">Smartphones</button>
-        <button class="filter-btn" onclick="filterByCategory('accesorio')">Accesorios</button>
-        <button class="filter-btn" onclick="filterByCategory('audio')">Audio</button>
+        <button class="filter-btn active" onclick="filterByCategory('todos', event)">Todos</button>
+        <button class="filter-btn" onclick="filterByCategory('laptop', event)">Laptops</button>
+        <button class="filter-btn" onclick="filterByCategory('smartphone', event)">Smartphones</button>
+        <button class="filter-btn" onclick="filterByCategory('accesorio', event)">Accesorios</button>
+        <button class="filter-btn" onclick="filterByCategory('audio', event)">Audio</button>
       </div>
 
       <div class="search-info" id="searchInfo"></div>
@@ -69,11 +65,11 @@
     </section>
 
     <!-- ===== FOOTER ===== -->
-    <footer class="footer">
+    <footer class="footer" id="contacto">
       <div class="footer-content">
         <div class="footer-section">
-          <h3>TechStore</h3>
-          <p>Tu tienda de confianza para tecnología</p>
+          <h3>🛒 TechStore</h3>
+          <p>Tu tienda de confianza para tecnología de vanguardia</p>
         </div>
 
         <div class="footer-section">
@@ -81,14 +77,17 @@
           <ul>
             <li><a href="#inicio">Inicio</a></li>
             <li><a href="#productos">Productos</a></li>
+            <li><a href="ofertas.html">Ofertas</a></li>
           </ul>
         </div>
 
         <div class="footer-section">
           <h3>Categorías</h3>
           <ul>
-            <li><a href="#">Laptops</a></li>
-            <li><a href="#">Smartphones</a></li>
+            <li><a href="#" onclick="filterByCategory('laptop', event); return false;">Laptops</a></li>
+            <li><a href="#" onclick="filterByCategory('smartphone', event); return false;">Smartphones</a></li>
+            <li><a href="#" onclick="filterByCategory('audio', event); return false;">Audio</a></li>
+            <li><a href="#" onclick="filterByCategory('accesorio', event); return false;">Accesorios</a></li>
           </ul>
         </div>
 
@@ -97,20 +96,22 @@
           <ul>
             <li>📧 info@techstore.com</li>
             <li>📞 +1 (809) 555-0123</li>
+            <li>📍 Santo Domingo, RD</li>
           </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Nosotros</h3>
+          <p>Somos una empresa dedicada a ofrecer la mejor tecnología al alcance de todos. Más de 10 años de experiencia en el mercado.</p>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2025 TechStore</p>
+        <p>&copy; 2025 TechStore - Todos los derechos reservados</p>
       </div>
     </footer>
 
     <!-- ===== JAVASCRIPT ===== -->
     <script src="./js/script.js"></script>
-  </body>
-</html>
-
-    <script type="module" src="script.js"></script>
   </body>
 </html>
