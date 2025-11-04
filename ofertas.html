@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ofertas - TechStore</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+      .ofertas-hero {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        padding: 80px 20px;
+        text-align: center;
+        color: white;
+      }
+      
+      .ofertas-hero h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+        animation: bounce 1s infinite;
+      }
+      
+      @keyframes bounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+      }
+      
+      .ofertas-hero p {
+        font-size: 1.3rem;
+        margin-bottom: 30px;
+      }
+      
+      .countdown {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 30px;
+      }
+      
+      .countdown-item {
+        background: rgba(255,255,255,0.2);
+        padding: 20px;
+        border-radius: 10px;
+        min-width: 100px;
+      }
+      
+      .countdown-item span {
+        display: block;
+        font-size: 2rem;
+        font-weight: bold;
+      }
+      
+      .countdown-item small {
+        font-size: 0.9rem;
+        opacity: 0.8;
+      }
+      
+      .ofertas-section {
+        max-width: 1200px;
+        margin: 50px auto;
+        padding: 20px;
+      }
+      
+      .oferta-destacada {
+        background: #fff;
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        padding: 30px;
+        margin-bottom: 40px;
+        border: 3px solid #ff6b6b;
+      }
+      
+      .oferta-badge {
+        background: #ff6b6b;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 25px;
+        display: inline-block;
+        font-weight: bold;
+        margin-bottom: 15px;
+      }
+      
+      .precio-oferta {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin: 20px 0;
+      }
+      
+      .precio-anterior {
+        text-decoration: line-through;
+        color: #999;
+        font-size: 1.5rem;
+      }
+      
+      .precio-actual {
+        font-size: 2.5rem;
+        color: #ff6b6b;
+        font-weight: bold;
+      }
+      
+      .descuento {
+        background: #51cf66;
+        color: white;
+        padding: 5px 15px;
+        border-radius: 20px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="logo">🛒 TechStore</a>
+        <ul class="nav-links">
+          <li><a href="index.html#inicio">Inicio</a></li>
+          <li><a href="index.html#productos">Productos</a></li>
+          <li><a href="ofertas.html">Ofertas</a></li>
+          <li><a href="index.html#contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- ===== HERO OFERTAS ===== -->
+    <section class="ofertas-hero">
+      <h1>🔥 ¡MEGA OFERTAS! 🔥</h1>
+      <p>Descuentos de hasta 70% en productos seleccionados</p>
+      <p style="font-size: 1.1rem;">⏰ Las ofertas terminan en:</p>
+      
+      <div class="countdown">
+        <div class="countdown-item">
+          <span id="dias">00</span>
+          <small>Días</small>
+        </div>
+        <div class="countdown-item">
+          <span id="horas">00</span>
+          <small>Horas</small>
+        </div>
+        <div class="countdown-item">
+          <span id="minutos">00</span>
+          <small>Minutos</small>
+        </div>
+        <div class="countdown-item">
+          <span id="segundos">00</span>
+          <small>Segundos</small>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== OFERTAS ===== -->
+    <section class="ofertas-section">
+      <h2 style="text-align: center; margin-bottom: 40px; font-size: 2.5rem;">🎁 Ofertas Destacadas</h2>
+      
+      <!-- Oferta 1 -->
+      <div class="oferta-destacada">
+        <span class="oferta-badge">⚡ OFERTA RELÁMPAGO</span>
+        <h3 style="font-size: 2rem; margin: 15px 0;">💻 Laptop Gaming Titan RTX 4070</h3>
+        <p style="color: #666; font-size: 1.1rem;">Laptop gaming de alto rendimiento con pantalla 144Hz y 16GB RAM</p>
+        
+        <div class="precio-oferta">
+          <span class="precio-anterior">$2,199.99</span>
+          <span class="precio-actual">$1,319.99</span>
+          <span class="descuento">-40% OFF</span>
+        </div>
+        
+        <p style="color: #ff6b6b; font-weight: bold;">🚨 ¡Solo quedan 3 unidades!</p>
+        <button style="background: #667eea; color: white; padding: 15px 40px; border: none; border-radius: 25px; font-size: 1.1rem; cursor: pointer; margin-top: 15px;">
+          🛒 Agregar al Carrito
+        </button>
+      </div>
+
+      <!-- Oferta 2 -->
+      <div class="oferta-destacada">
+        <span class="oferta-badge">🔥 SUPER OFERTA</span>
+        <h3 style="font-size: 2rem; margin: 15px 0;">📱 Smartphone Pro Max 108MP</h3>
+        <p style="color: #666; font-size: 1.1rem;">Smartphone premium con cámara profesional de 108MP y pantalla AMOLED</p>
+        
+        <div class="precio-oferta">
+          <span class="precio-anterior">$1,199.99</span>
+          <span class="precio-actual">$719.99</span>
+          <span class="descuento">-40% OFF</span>
+        </div>
+        
+        <p style="color: #51cf66; font-weight: bold;">✅ Disponible - Envío gratis</p>
+        <button style="background: #667eea; color: white; padding: 15px 40px; border: none; border-radius: 25px; font-size: 1.1rem; cursor: pointer; margin-top: 15px;">
+          🛒 Agregar al Carrito
+        </button>
+      </div>
+
+      <!-- Oferta 3 -->
+      <div class="oferta-destacada">
+        <span class="oferta-badge">💎 OFERTA PREMIUM</span>
+        <h3 style="font-size: 2rem; margin: 15px 0;">🎧 Auriculares Studio Monitor Pro</h3>
+        <p style="color: #666; font-size: 1.1rem;">Auriculares profesionales para producción musical con cancelación de ruido</p>
+        
+        <div class="precio-oferta">
+          <span class="precio-anterior">$399.99</span>
+          <span class="precio-actual">$239.99</span>
+          <span class="descuento">-40% OFF</span>
+        </div>
+        
+        <p style="color: #51cf66; font-weight: bold;">✅ En stock - 15 disponibles</p>
+        <button style="background: #667eea; color: white; padding: 15px 40px; border: none; border-radius: 25px; font-size: 1.1rem; cursor: pointer; margin-top: 15px;">
+          🛒 Agregar al Carrito
+        </button>
+      </div>
+
+      <!-- Más Ofertas -->
+      <div style="text-align: center; margin-top: 50px;">
+        <h3 style="font-size: 1.8rem; margin-bottom: 20px;">🔍 ¿Buscas más ofertas?</h3>
+        <a href="index.html#productos" style="background: #51cf66; color: white; padding: 15px 40px; text-decoration: none; border-radius: 25px; font-size: 1.1rem; display: inline-block;">
+          Ver Todos los Productos
+        </a>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer" id="contacto">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>🛒 TechStore</h3>
+          <p>Tu tienda de confianza para tecnología de vanguardia</p>
+        </div>
+
+        <div class="footer-section">
+          <h3>Enlaces Rápidos</h3>
+          <ul>
+            <li><a href="index.html#inicio">Inicio</a></li>
+            <li><a href="index.html#productos">Productos</a></li>
+            <li><a href="ofertas.html">Ofertas</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Contacto</h3>
+          <ul>
+            <li>📧 info@techstore.com</li>
+            <li>📞 +1 (809) 555-0123</li>
+            <li>📍 Santo Domingo, RD</li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Nosotros</h3>
+          <p>Somos una empresa dedicada a ofrecer la mejor tecnología al alcance de todos. Más de 10 años de experiencia en el mercado.</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 TechStore - Todos los derechos reservados</p>
+      </div>
+    </footer>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+      // Contador regresivo
+      const fechaFinal = new Date('2025-12-31T23:59:59').getTime();
+      
+      function actualizarContador() {
+        const ahora = new Date().getTime();
+        const diferencia = fechaFinal - ahora;
+        
+        const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+        const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+        const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+        
+        document.getElementById('dias').textContent = dias.toString().padStart(2, '0');
+        document.getElementById('horas').textContent = horas.toString().padStart(2, '0');
+        document.getElementById('minutos').textContent = minutos.toString().padStart(2, '0');
+        document.getElementById('segundos').textContent = segundos.toString().padStart(2, '0');
+      }
+      
+      setInterval(actualizarContador, 1000);
+      actualizarContador();
+    </script>
+  </body>
+</html>
